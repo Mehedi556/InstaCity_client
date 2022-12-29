@@ -6,6 +6,7 @@ import About from "../Pages/About/About";
 import Home from "../Pages/Home/Home";
 import PostDetails from "../Pages/Home/PostDetails";
 import Media from "../Pages/Media/Media";
+import PrivetRoute from "./PrivetRoute";
 
 export const router = createBrowserRouter([
     {
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
             ,
             {
                 path: `/postDetails/:id`,
-                element: <PostDetails></PostDetails>,
+                element: <PrivetRoute><PostDetails></PostDetails></PrivetRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/postDetails/${params.id}`)
             }
         ]
