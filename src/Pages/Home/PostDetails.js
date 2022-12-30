@@ -69,7 +69,7 @@ const PostDetails = () => {
   }
 
   return (
-    <div className="">
+    <div className="my-20">
       <div className="card w-12/12 md:w-9/12 bg-base-100 shadow-xl mx-auto rounded-none border p-4 rounded-lg">
         <figure>
           <img src={post?.pic} alt="Shoes" />

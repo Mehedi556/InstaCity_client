@@ -6,7 +6,7 @@ const Media = () => {
   const { data: postData = [], isLoading } = useQuery({
     queryKey: ['Posts'],
     queryFn: () =>
-      fetch('https://insta-server-murex.vercel.app/postDetails').then(res =>
+      fetch('https://insta-server-murex.vercel.app/postDetail').then(res =>
         res.json()
       ),
   });
