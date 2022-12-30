@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <PrivetRoute><About></About></PrivetRoute>
             }
             ,
             {

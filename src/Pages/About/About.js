@@ -1,16 +1,18 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Loader from '../Loader/Loader';
 import { AuthContext } from '../../Contexts/AuthProvider'
 import Modal from '../Modal/Modal';
 
 const About = () => {
     const {user} = useContext(AuthContext);
+    const [mainData, setMainData] = useState([])
     const {data, isLoading} = useQuery({
         queryKey: ['users'],
         queryFn: () => fetch(`http://localhost:5000/users?email=${user?.email}`)
         .then(res => res.json())
     })
+    // setMainData(data)
     console.log(data);
     if(isLoading){
         return <Loader></Loader>
@@ -60,7 +62,11 @@ const About = () => {
     </div>
   </div>
 </div>
-<Modal data={data}></Modal>
+{
+  data &&
+  <Modal data={data}></Modal>
+}
+
         </div>
     );
 };

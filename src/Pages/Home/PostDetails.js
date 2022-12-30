@@ -16,6 +16,11 @@ const PostDetails = () => {
     <p className='font-bold'>Post created by: <span className='text-xl'>{post.displayName}</span></p>
     <p className='font-bold'>Creators email: <span className='text-xl'>{post.email}</span></p>
   </div>
+  <div>
+    <label className='pl-6'>Add your comment</label>
+  <input type="text" name="" id="" className='input input-sm input-bordered w-11/12 mx-auto'/>
+  </div>
+  
 </div>
         </div>
     );

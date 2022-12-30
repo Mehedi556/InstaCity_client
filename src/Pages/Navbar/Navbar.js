@@ -26,6 +26,12 @@ const Navbar = () => {
       <Link to="/"><li><a>Home</a></li></Link>
       <Link to="/media"><li><a>Media</a></li></Link>
       <Link to="/about"><li><a>About</a></li></Link>
+      {
+        user?.uid ?
+        <button onClick={handleLogOut}><li><a>Logout</a></li></button>
+        :
+        <Link to="/login"><li><a>Login</a></li></Link>
+      }
       </ul>
     </div>
     <div className='flex items-center'>
