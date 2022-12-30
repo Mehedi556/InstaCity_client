@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 
 const Media = () => {
@@ -27,7 +28,9 @@ const Media = () => {
                 ...
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Details</button>
+              <Link to={`/postDetails/${post?._id}`}>
+                  <button className="btn btn-primary">Details</button>
+                </Link>
               </div>
             </div>
           </div>
