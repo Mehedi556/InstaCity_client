@@ -24,7 +24,7 @@ const About = () => {
     <div className="text-center  text-center">
       <h1 className="text-5xl font-bold">User Information</h1>
     </div>
-
+ 
 
     <div className="card  w-full max-w-sm shadow-2xl bg-base-100">
       <div className="card-body w-full">

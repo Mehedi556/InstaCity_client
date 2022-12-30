@@ -11,7 +11,7 @@ const Modal = ({data}) => {
   const address = form.address.value;
   console.log(name,email,address,university);
   // data='null';
- }
+ } 
 
     return (
         <>
